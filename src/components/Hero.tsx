@@ -1,0 +1,44 @@
+import React from 'react';
+
+export function Hero() {
+  return (
+    <section className="bg-gray-50 pt-20 pb-32">
+      <div className="max-w-7xl mx-auto px-6">
+        <div className="text-center max-w-4xl mx-auto">
+          <h1 
+            className="text-5xl md:text-7xl font-light text-[#22113E] mb-6 leading-tight"
+            style={{ fontFamily: 'Space Grotesk' }}
+          >
+            Room for Interaction
+          </h1>
+          <p 
+            className="text-xl md:text-2xl text-gray-700 mb-8 font-light leading-relaxed"
+            style={{ fontFamily: 'Space Grotesk' }}
+          >
+            A playground for body, space and technology.
+          </p>
+          <div 
+            className="inline-block bg-gray-100 px-6 py-3 text-lg text-[#22113E] mb-12 font-medium"
+            style={{ fontFamily: 'Courier Prime' }}
+          >
+            Seven Saturdays, countless ways to interact.
+          </div>
+          <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
+            <button 
+              className="bg-[#EA7DFF] text-white px-8 py-3 text-lg font-medium hover:bg-[#d666e6] transition-colors"
+              style={{ fontFamily: 'Inter' }}
+            >
+              Sign up to stay updated
+            </button>
+            <button 
+              className="bg-white text-[#22113E] px-8 py-3 text-lg font-medium border border-gray-300 hover:bg-gray-50 transition-colors"
+              style={{ fontFamily: 'Inter' }}
+            >
+              Learn more
+            </button>
+          </div>
+        </div>
+      </div>
+    </section>
+  );
+}
