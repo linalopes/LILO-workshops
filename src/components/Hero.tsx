@@ -24,12 +24,13 @@ export function Hero() {
             Seven Saturdays, countless ways to interact.
           </div>
           <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
-            <button 
+            <a 
+              href="#contact"
               className="bg-[#EA7DFF] text-white px-8 py-3 text-lg font-medium hover:bg-[#d666e6] transition-colors"
               style={{ fontFamily: 'Inter' }}
             >
               Sign up to stay updated
-            </button>
+            </a>
             <button 
               className="bg-white text-[#22113E] px-8 py-3 text-lg font-medium border border-gray-300 hover:bg-gray-50 transition-colors"
               style={{ fontFamily: 'Inter' }}

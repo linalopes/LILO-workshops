@@ -5,6 +5,7 @@ import { About } from './components/About';
 import { Workshops } from './components/Workshops';
 import { Agenda } from './components/Agenda';
 import { Artist } from './components/Artist';
+import { ContactForm } from './components/ContactForm';
 import { Footer } from './components/Footer';
 
 function App() {
@@ -16,6 +17,7 @@ function App() {
       <Workshops />
       <Agenda />
       <Artist />
+      <ContactForm />
       <Footer />
     </div>
   );

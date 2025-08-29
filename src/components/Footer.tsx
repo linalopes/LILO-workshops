@@ -13,10 +13,14 @@ export function Footer() {
             Want to be the first to know when registrations open?
           </h2>
           <div className="flex justify-center">
-            <button className="bg-[#08F2DB] text-[#22113E] px-8 py-3 text-lg font-medium hover:bg-[#06d4bf] transition-colors flex items-center gap-3" style={{ fontFamily: 'Inter' }}>
+            <a 
+              href="#contact"
+              className="bg-[#08F2DB] text-[#22113E] px-8 py-3 text-lg font-medium hover:bg-[#06d4bf] transition-colors flex items-center gap-3"
+              style={{ fontFamily: 'Inter' }}
+            >
               <Mail className="w-5 h-5" />
               Join the mailing list
-            </button>
+            </a>
           </div>
         </div>
       </div>
