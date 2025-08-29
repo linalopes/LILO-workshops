@@ -49,13 +49,13 @@ export function ContactForm() {
     <section id="contact" className="bg-gray-50 py-16">
       <div className="max-w-4xl mx-auto px-6">
         <div className="text-center mb-12">
-          <h2 
+          <h2
             className="text-3xl md:text-4xl font-light text-[#22113E] mb-4"
             style={{ fontFamily: 'Space Grotesk' }}
           >
             Get in Touch
           </h2>
-          <p 
+          <p
             className="text-lg text-gray-600 max-w-2xl mx-auto"
             style={{ fontFamily: 'Inter' }}
           >
@@ -67,7 +67,7 @@ export function ContactForm() {
           {submitStatus === 'success' ? (
             <div className="text-center py-8">
               <CheckCircle className="w-16 h-16 text-green-500 mx-auto mb-4" />
-              <h3 
+              <h3
                 className="text-2xl font-medium text-[#22113E] mb-2"
                 style={{ fontFamily: 'Space Grotesk' }}
               >
@@ -86,8 +86,8 @@ export function ContactForm() {
             <form onSubmit={handleSubmit} className="space-y-6">
               <div className="grid md:grid-cols-2 gap-6">
                 <div>
-                  <label 
-                    htmlFor="name" 
+                  <label
+                    htmlFor="name"
                     className="block text-sm font-medium text-[#22113E] mb-2"
                     style={{ fontFamily: 'Inter' }}
                   >
@@ -104,10 +104,10 @@ export function ContactForm() {
                     style={{ fontFamily: 'Inter' }}
                   />
                 </div>
-                
+
                 <div>
-                  <label 
-                    htmlFor="email" 
+                  <label
+                    htmlFor="email"
                     className="block text-sm font-medium text-[#22113E] mb-2"
                     style={{ fontFamily: 'Inter' }}
                   >
@@ -127,8 +127,8 @@ export function ContactForm() {
               </div>
 
               <div>
-                <label 
-                  htmlFor="workshopInterest" 
+                <label
+                  htmlFor="workshopInterest"
                   className="block text-sm font-medium text-[#22113E] mb-2"
                   style={{ fontFamily: 'Inter' }}
                 >
@@ -155,8 +155,8 @@ export function ContactForm() {
               </div>
 
               <div>
-                <label 
-                  htmlFor="message" 
+                <label
+                  htmlFor="message"
                   className="block text-sm font-medium text-[#22113E] mb-2"
                   style={{ fontFamily: 'Inter' }}
                 >

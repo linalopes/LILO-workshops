@@ -6,14 +6,14 @@ export function Footer() {
     <footer className="bg-white py-16 border-t border-gray-200">
       <div className="max-w-6xl mx-auto px-6">
         <div className="text-center">
-          <h2 
+          <h2
             className="text-3xl md:text-4xl font-light text-[#22113E] mb-8"
             style={{ fontFamily: 'Space Grotesk' }}
           >
             Want to be the first to know when registrations open?
           </h2>
           <div className="flex justify-center">
-            <a 
+            <a
               href="#contact"
               className="bg-[#08F2DB] text-[#22113E] px-8 py-3 text-lg font-medium hover:bg-[#06d4bf] transition-colors flex items-center gap-3"
               style={{ fontFamily: 'Inter' }}
@@ -24,16 +24,16 @@ export function Footer() {
           </div>
         </div>
       </div>
-      
+
       <div className="max-w-7xl mx-auto px-6 pt-12 mt-12 border-t border-gray-200">
         <div className="flex flex-col md:flex-row justify-between items-center">
-          <div 
+          <div
             className="text-2xl font-light text-[#22113E] mb-4 md:mb-0"
             style={{ fontFamily: 'Space Grotesk' }}
           >
             Room for Interaction
           </div>
-          <div 
+          <div
             className="text-gray-600 font-normal"
             style={{ fontFamily: 'Inter' }}
           >

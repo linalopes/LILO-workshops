@@ -8,24 +8,24 @@ export function Artist() {
         <div className="bg-white p-8 md:p-12 border border-gray-200">
           <div className="flex flex-col md:flex-row items-center gap-12">
             <div className="flex-shrink-0">
-              <div className="bg-[#EA7DFF] p-8">
-                <User className="w-16 h-16 text-white" />
+              <div className="bg-[#EA7DFF] ">
+                <img src="/Lina Lopes-06.jpg" alt="Lina Lopes" className="w-40 h-40 object-cover" />
               </div>
             </div>
             <div className="flex-1">
-              <h2 
+              <h2
                 className="text-3xl md:text-4xl font-light text-[#22113E] mb-6"
                 style={{ fontFamily: 'Space Grotesk' }}
               >
                 About the Host
               </h2>
-              <p 
+              <p
                 className="text-base leading-relaxed text-gray-700 font-normal"
                 style={{ fontFamily: 'Inter' }}
               >
-                Lina Lopes is an artist and creative technologist exploring the intersections of performance, 
-                interactive spaces, and technology. With two decades of experience across art, design, and innovation, 
-                she has presented her work internationally in museums, universities, and festivals. She creates 
+                Lina Lopes is an artist and creative technologist exploring the intersections of performance,
+                interactive spaces, and technology. With more than 10 years of experience across art, design, and innovation,
+                she has presented her work internationally in museums, universities, and festivals. She creates
                 collaborative workshops where technology becomes a tool for imagination, play, and radical experimentation.
               </p>
             </div>
