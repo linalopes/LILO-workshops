@@ -204,6 +204,67 @@ export function Workshops() {
                 />
               </div>
 
+              {/* Workshop Schedule */}
+              <div className="mb-8">
+                <h3
+                  className="text-lg font-medium text-[#22113E] mb-4"
+                  style={{ fontFamily: 'Space Grotesk' }}
+                >
+                  Workshop Schedule
+                </h3>
+                <div className="grid md:grid-cols-2 gap-4">
+                  {/* Online Sessions */}
+                  <div className="rounded-lg p-4" style={{ backgroundColor: '#22113E', border: '1px solid #22113E' }}>
+                    <div className="flex items-center gap-2 mb-2">
+                      <div className="w-3 h-3 rounded-full" style={{ backgroundColor: '#08F2DB' }}></div>
+                      <h4
+                        className="font-medium text-white"
+                        style={{ fontFamily: 'Inter' }}
+                      >
+                        Online Sessions
+                      </h4>
+                    </div>
+                    <p
+                      className="text-sm mb-2"
+                      style={{ fontFamily: 'Courier Prime', color: '#08F2DB' }}
+                    >
+                      Tuesdays, 19:00 CET
+                    </p>
+                    <p
+                      className="text-sm font-medium text-white"
+                      style={{ fontFamily: 'Inter' }}
+                    >
+                      April 7 & April 14, 2026
+                    </p>
+                  </div>
+
+                  {/* In-Person Session */}
+                  <div className="rounded-lg p-4" style={{ backgroundColor: '#EA7DFF', border: '1px solid #EA7DFF' }}>
+                    <div className="flex items-center gap-2 mb-2">
+                      <div className="w-3 h-3 bg-white rounded-full"></div>
+                      <h4
+                        className="font-medium text-white"
+                        style={{ fontFamily: 'Inter' }}
+                      >
+                        In-Person Session
+                      </h4>
+                    </div>
+                    <p
+                      className="text-sm mb-2"
+                      style={{ fontFamily: 'Courier Prime', color: '#22113E' }}
+                    >
+                      Saturday, 10:00–17:00 CET
+                    </p>
+                    <p
+                      className="text-sm font-medium text-white"
+                      style={{ fontFamily: 'Inter' }}
+                    >
+                      April 25, 2026
+                    </p>
+                  </div>
+                </div>
+              </div>
+
               {/* Content */}
               <div className="space-y-6" style={{ fontFamily: 'Inter' }}>
                 <div className="text-gray-700 leading-relaxed">
