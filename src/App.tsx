@@ -14,8 +14,8 @@ function App() {
     <div className="min-h-screen bg-white">
       <Header />
       <Hero />
-      <About />
       <Workshops />
+      <About />
       <Agenda />
       <Location />
       <Artist />
