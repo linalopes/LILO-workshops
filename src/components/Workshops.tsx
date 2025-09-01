@@ -7,7 +7,8 @@ const workshops = [
     subtitle: "Video Mapping + AI",
     description: "Turning the studio into an expanded cinema.",
     icon: Video,
-    color: "bg-[#EA7DFF]"
+    color: "bg-[#EA7DFF]",
+    link: "https://luma.com/9nfn6wm2"
   },
   {
     title: "Maze Circuit",
@@ -57,13 +58,13 @@ export function Workshops() {
   return (
     <section id="workshops" className="bg-gray-50 py-16">
       <div className="max-w-7xl mx-auto px-6">
-        <h2 
+        <h2
           className="text-3xl md:text-4xl font-light text-[#22113E] mb-4 text-center"
           style={{ fontFamily: 'Space Grotesk' }}
         >
           Workshop Series
         </h2>
-        <p 
+        <p
           className="text-center text-base text-gray-600 mb-12 font-normal max-w-2xl mx-auto"
           style={{ fontFamily: 'Inter' }}
         >
@@ -72,32 +73,59 @@ export function Workshops() {
         <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-4">
           {workshops.map((workshop, index) => {
             const IconComponent = workshop.icon;
-            return (
-              <div 
-                key={index}
-                className="bg-white p-6 border border-gray-200 hover:border-gray-300 transition-all duration-200 group"
-              >
+            const isClickable = workshop.link;
+
+            const CardContent = () => (
+              <>
                 <div className={`${workshop.color} p-3 w-fit mb-4`}>
                   <IconComponent className="w-6 h-6 text-white" />
                 </div>
-                <h3 
+                <h3
                   className="text-lg font-medium text-[#22113E] mb-2"
                   style={{ fontFamily: 'Space Grotesk' }}
                 >
                   {workshop.title}
                 </h3>
-                <p 
+                <p
                   className="text-sm text-gray-600 mb-3 font-medium"
                   style={{ fontFamily: 'Courier Prime' }}
                 >
                   {workshop.subtitle}
                 </p>
-                <p 
+                <p
                   className="text-sm text-gray-700 font-normal leading-relaxed"
                   style={{ fontFamily: 'Inter' }}
                 >
                   {workshop.description}
                 </p>
+                {isClickable && (
+                  <div className="mt-4 text-xs text-[#EA7DFF] font-medium" style={{ fontFamily: 'Inter' }}>
+                    Click to learn more & buy tickets →
+                  </div>
+                )}
+              </>
+            );
+
+            if (isClickable) {
+              return (
+                <a
+                  key={index}
+                  href={workshop.link}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="bg-white p-6 border border-gray-200 hover:border-[#EA7DFF] hover:shadow-lg transition-all duration-200 group cursor-pointer block"
+                >
+                  <CardContent />
+                </a>
+              );
+            }
+
+            return (
+              <div
+                key={index}
+                className="bg-white p-6 border border-gray-200 hover:border-gray-300 transition-all duration-200 group"
+              >
+                <CardContent />
               </div>
             );
           })}
