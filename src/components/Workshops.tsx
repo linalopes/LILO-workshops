@@ -141,12 +141,12 @@ export function Workshops() {
           <div className="bg-white rounded-lg max-w-4xl max-h-[90vh] overflow-y-auto">
             <div className="p-8">
               {/* Header */}
-              <div className="flex items-center justify-between mb-6">
-                <div className="flex items-center gap-4">
+              <div className="flex items-start justify-between mb-6">
+                <div className="flex items-center gap-4 flex-1">
                   <div className="bg-[#EA7DFF] p-3">
                     <Video className="w-6 h-6 text-white" />
                   </div>
-                  <div>
+                  <div className="flex-1">
                     <h2
                       className="text-2xl font-medium text-[#22113E]"
                       style={{ fontFamily: 'Space Grotesk' }}
@@ -161,23 +161,38 @@ export function Workshops() {
                     </p>
                   </div>
                 </div>
-                <div className="flex items-center gap-3">
-                  <a
-                    href="https://luma.com/9nfn6wm2"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="bg-[#EA7DFF] text-white px-4 py-2 text-sm font-medium hover:bg-[#d666e6] transition-colors rounded"
-                    style={{ fontFamily: 'Inter' }}
-                  >
-                    Buy the ticket at Luma
-                  </a>
-                  <button
-                    onClick={closeModal}
-                    className="text-gray-400 hover:text-gray-600 transition-colors"
-                  >
-                    <X className="w-6 h-6" />
-                  </button>
-                </div>
+                <button
+                  onClick={closeModal}
+                  className="text-gray-400 hover:text-gray-600 transition-colors ml-4 flex-shrink-0"
+                >
+                  <X className="w-6 h-6" />
+                </button>
+              </div>
+
+              {/* Mobile Ticket Button */}
+              <div className="md:hidden mb-6">
+                <a
+                  href="https://luma.com/9nfn6wm2"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="bg-[#EA7DFF] text-white px-6 py-4 text-base font-medium hover:bg-[#d666e6] transition-colors rounded-lg w-full text-center block"
+                  style={{ fontFamily: 'Inter' }}
+                >
+                  🎫 Buy the ticket at Luma
+                </a>
+              </div>
+
+              {/* Desktop Ticket Button */}
+              <div className="hidden md:block mb-6">
+                <a
+                  href="https://luma.com/9nfn6wm2"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="bg-[#EA7DFF] text-white px-6 py-3 text-sm font-medium hover:bg-[#d666e6] transition-colors rounded-lg inline-block"
+                  style={{ fontFamily: 'Inter' }}
+                >
+                  🎫 Buy the ticket at Luma
+                </a>
               </div>
 
               {/* Workshop Image */}
@@ -237,10 +252,19 @@ export function Workshops() {
               </div>
 
               {/* Footer */}
-              <div className="mt-8 pt-6 border-t border-gray-200 flex justify-end">
+              <div className="mt-8 pt-6 border-t border-gray-200 flex flex-col sm:flex-row gap-3 sm:justify-between sm:items-center">
+                <a
+                  href="https://luma.com/9nfn6wm2"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="bg-[#EA7DFF] text-white px-6 py-3 text-base font-medium hover:bg-[#d666e6] transition-colors rounded-lg text-center block sm:inline-block"
+                  style={{ fontFamily: 'Inter' }}
+                >
+                  🎫 Buy the ticket at Luma
+                </a>
                 <button
                   onClick={closeModal}
-                  className="bg-[#EA7DFF] text-white px-6 py-2 font-medium hover:bg-[#d666e6] transition-colors"
+                  className="bg-gray-500 text-white px-6 py-3 text-base font-medium hover:bg-gray-600 transition-colors rounded-lg text-center block sm:inline-block"
                   style={{ fontFamily: 'Inter' }}
                 >
                   Close
