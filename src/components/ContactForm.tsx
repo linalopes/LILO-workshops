@@ -63,7 +63,7 @@ export function ContactForm() {
           </p>
         </div>
 
-        <div className="bg-white p-8 md:p-12 rounded-lg shadow-sm border border-gray-200">
+        <div className="bg-white p-8 md:p-12 shadow-sm border border-gray-200">
           {submitStatus === 'success' ? (
             <div className="text-center py-8">
               <CheckCircle className="w-16 h-16 text-green-500 mx-auto mb-4" />
@@ -100,7 +100,7 @@ export function ContactForm() {
                     value={formData.name}
                     onChange={handleChange}
                     required
-                    className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-[#EA7DFF] focus:border-transparent transition-colors"
+                    className="w-full px-4 py-3 border border-gray-300 shadow-sm focus:ring-2 focus:ring-[#EA7DFF] focus:border-transparent transition-colors"
                     style={{ fontFamily: 'Inter' }}
                   />
                 </div>
@@ -120,7 +120,7 @@ export function ContactForm() {
                     value={formData.email}
                     onChange={handleChange}
                     required
-                    className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-[#EA7DFF] focus:border-transparent transition-colors"
+                    className="w-full px-4 py-3 border border-gray-300 shadow-sm focus:ring-2 focus:ring-[#EA7DFF] focus:border-transparent transition-colors"
                     style={{ fontFamily: 'Inter' }}
                   />
                 </div>
@@ -139,7 +139,7 @@ export function ContactForm() {
                   name="workshopInterest"
                   value={formData.workshopInterest}
                   onChange={handleChange}
-                  className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-[#EA7DFF] focus:border-transparent transition-colors"
+                  className="w-full px-4 py-3 border border-gray-300 shadow-sm focus:ring-2 focus:ring-[#EA7DFF] focus:border-transparent transition-colors"
                   style={{ fontFamily: 'Inter' }}
                 >
                   <option value="">Select a workshop (optional)</option>
@@ -170,13 +170,13 @@ export function ContactForm() {
                   required
                   rows={4}
                   placeholder="Tell us about your interest, ask questions, or just say hello..."
-                  className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-[#EA7DFF] focus:border-transparent transition-colors resize-none"
+                  className="w-full px-4 py-3 border border-gray-300 shadow-sm focus:ring-2 focus:ring-[#EA7DFF] focus:border-transparent transition-colors resize-none"
                   style={{ fontFamily: 'Inter' }}
                 />
               </div>
 
               {submitStatus === 'error' && (
-                <div className="flex items-center gap-2 text-red-600 bg-red-50 p-4 rounded-lg">
+                <div className="flex items-center gap-2 text-red-600 bg-red-50 p-4 shadow-sm border border-gray-200">
                   <AlertCircle className="w-5 h-5" />
                   <span style={{ fontFamily: 'Inter' }}>
                     Something went wrong. Please try again or contact us directly.
@@ -193,7 +193,7 @@ export function ContactForm() {
                 >
                   {isSubmitting ? (
                     <>
-                      <div className="w-5 h-5 border-2 border-white border-t-transparent rounded-full animate-spin" />
+                      <div className="w-5 h-5 border-2 border-white border-t-transparent animate-spin" />
                       Sending...
                     </>
                   ) : (

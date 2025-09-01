@@ -25,7 +25,7 @@ export function Header() {
               </a>
             </nav>
             <a href="#contact" className="bg-[#EA7DFF] text-white px-6 py-2 font-medium hover:bg-[#d666e6] transition-colors" style={{ fontFamily: 'Inter' }}>
-              Join Mailing List
+            Stay updated
             </a>
           </div>
           <button className="md:hidden text-[#22113E]">

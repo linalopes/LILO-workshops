@@ -19,7 +19,7 @@ export function Footer() {
               style={{ fontFamily: 'Inter' }}
             >
               <Mail className="w-5 h-5" />
-              Join the mailing list
+              Stay updated
             </a>
           </div>
         </div>

@@ -4,6 +4,7 @@ import { Hero } from './components/Hero';
 import { About } from './components/About';
 import { Workshops } from './components/Workshops';
 import { Agenda } from './components/Agenda';
+import { Location } from './components/Location';
 import { Artist } from './components/Artist';
 import { ContactForm } from './components/ContactForm';
 import { Footer } from './components/Footer';
@@ -16,6 +17,7 @@ function App() {
       <About />
       <Workshops />
       <Agenda />
+      <Location />
       <Artist />
       <ContactForm />
       <Footer />
