@@ -196,13 +196,13 @@ export function Workshops() {
               </div> */}
 
               {/* Workshop Image */}
-              {/* <div className="mb-6">
+              <div className="mb-6">
                 <img
                   src="/Augmented-Cinema.png"
                   alt="Augmented Cinema workshop - Video mapping and AI in immersive spaces"
                   className="w-full h-auto rounded-lg shadow-sm"
                 />
-              </div> */}
+              </div>
 
               {/* Workshop Schedule */}
               <div className="mb-8">
@@ -277,7 +277,7 @@ export function Workshops() {
                   </p>
                 </div>
 
-                <div>
+                {/* <div>
                   <h3
                     className="text-lg font-medium text-[#22113E] mb-4"
                     style={{ fontFamily: 'Space Grotesk' }}
@@ -294,9 +294,9 @@ export function Workshops() {
                     <li>Work with tools such as <strong>MadMapper</strong> (primary), <strong>Resolume</strong>, and alternative software (including iPad-based solutions).</li>
                     <li>Collaboratively design and present a <strong>two-minute immersive scene</strong> inside the studio, with attempts to document the work even if video mapping often resists capture.</li>
                   </ul>
-                </div>
+                </div> */}
 
-                <div>
+                {/* <div>
                   <h3
                     className="text-lg font-medium text-[#22113E] mb-4"
                     style={{ fontFamily: 'Space Grotesk' }}
@@ -309,13 +309,25 @@ export function Workshops() {
                   <p className="text-gray-700 leading-relaxed mt-4">
                     This workshop is open to performers, designers, educators, architects, and anyone interested in discovering how projection and AI can transform a room into a stage, a story, or a dreamscape. What you take with you is not only technical skills but also a sense of how simple tools — a projector, a surface, a generated image — can shift perception and create new experiences in performance, teaching, or exhibition design.
                   </p>
-                </div>
-                
-                <div className="">
+                </div> */}
+              </div>
+
+              {/* Luma Registration Embed */}
+              <div className="mt-8">
+                <h3
+                  className="text-lg font-medium text-[#22113E] mb-4"
+                  style={{ fontFamily: 'Space Grotesk' }}
+                >
+                  Register for the Workshop
+                </h3>
+                <div className="flex justify-center">
                   <iframe
-                    src="https://luma.com/9nfn6wm2"
-                    width = "100%"
-                    height = "800"
+                    src="https://luma.com/embed/event/evt-xNrvmYUE6CxuAAC/simple"
+                    width="100%"
+                    height="450"
+                    allow="fullscreen; payment"
+                    aria-hidden="false"
+                    tabIndex={0}
                   ></iframe>
                 </div>
               </div>
