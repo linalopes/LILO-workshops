@@ -93,7 +93,7 @@ export function Agenda() {
                 </th>
                 <th className="px-6 py-4 text-left text-sm font-medium text-[#22113E] border-b border-gray-200" style={{ fontFamily: 'Inter' }}>
                   Online Sessions<br/>
-                  <span className="text-xs text-gray-500 font-normal">Tuesdays, 19:00 CET</span>
+                  <span className="text-xs text-gray-500 font-normal">Tuesdays, 19:00-21:00 CET</span>
                 </th>
                 <th className="px-6 py-4 text-left text-sm font-medium text-[#22113E] border-b border-gray-200" style={{ fontFamily: 'Inter' }}>
                   In-Person<br/>

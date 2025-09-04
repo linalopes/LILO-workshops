@@ -183,7 +183,7 @@ export function Workshops() {
               </div>
 
               {/* Desktop Ticket Button */}
-              <div className="hidden md:block mb-6">
+              {/* <div className="hidden md:block mb-6">
                 <a
                   href="https://luma.com/9nfn6wm2"
                   target="_blank"
@@ -193,16 +193,16 @@ export function Workshops() {
                 >
                   🎫 Buy the ticket at Luma
                 </a>
-              </div>
+              </div> */}
 
               {/* Workshop Image */}
-              <div className="mb-6">
+              {/* <div className="mb-6">
                 <img
                   src="/Augmented-Cinema.png"
                   alt="Augmented Cinema workshop - Video mapping and AI in immersive spaces"
                   className="w-full h-auto rounded-lg shadow-sm"
                 />
-              </div>
+              </div> */}
 
               {/* Workshop Schedule */}
               <div className="mb-8">
@@ -309,6 +309,14 @@ export function Workshops() {
                   <p className="text-gray-700 leading-relaxed mt-4">
                     This workshop is open to performers, designers, educators, architects, and anyone interested in discovering how projection and AI can transform a room into a stage, a story, or a dreamscape. What you take with you is not only technical skills but also a sense of how simple tools — a projector, a surface, a generated image — can shift perception and create new experiences in performance, teaching, or exhibition design.
                   </p>
+                </div>
+                
+                <div className="">
+                  <iframe
+                    src="https://luma.com/9nfn6wm2"
+                    width = "100%"
+                    height = "800"
+                  ></iframe>
                 </div>
               </div>
 
