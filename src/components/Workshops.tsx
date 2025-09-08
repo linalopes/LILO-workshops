@@ -169,7 +169,37 @@ const workshops: Workshop[] = [
     description: "Build and play with rolling marbles and sound.",
     icon: Music,
     color: "bg-[#08F2DB]",
-    hasModal: false
+    hasModal: true,
+    modalData: {
+      schedule: {
+        online: {
+          title: "Online Sessions",
+          time: "Tuesdays, 19:00 CET",
+          dates: "August 18 & August 25, 2026",
+          color: "#22113E",
+          textColor: "#08F2DB"
+        },
+        inPerson: {
+          title: "In-Person Session",
+          time: "Saturday, 10:00–17:00 CET",
+          dates: "August 29, 2026",
+          color: "#EA7DFF",
+          textColor: "#22113E"
+        }
+      },
+      content: {
+        description: "Marble Machine Orchestra is a collaborative workshop where participants design and build kinetic sound machines from simple materials. Working in groups, you will create marble tracks on perforated panels, using screws, 3D-printed connectors, cardboard, and conduits. As marbles roll and collide with obstacles, rhythms and sounds emerge. The result is a collective installation where mechanics, improvisation, and play come together.\n\nThe workshop is inspired by the famous Wintergatan Marble Machine video. While we won't build that massive contraption, we apply the same principles of dynamics, elements, and mechanisms at a smaller, DIY scale.",
+        whatYoullLearn: [
+          "Build kinetic mechanisms on perforated panels",
+          "Experiment with ramps, marbles, and obstacles to generate rhythm",
+          "Use everyday materials (cardboard, conduits, screws, 3D-printed parts) for sound-making",
+          "Collaborate in groups to design playful sound installations"
+        ],
+        whoShouldJoin: "Open to educators, designers, architects, performers, musicians, and anyone over 16 interested in interactive installations and creative mechanics. No previous experience required — beginners welcome."
+      },
+      lumaEventUrl: "https://luma.com/7uik3pz9",
+      lumaEmbedUrl: "https://luma.com/embed/event/evt-0E8azprqOAA2U1E/simple"
+    }
   },
   {
     id: "gesture-to-pen",
@@ -178,7 +208,37 @@ const workshops: Workshop[] = [
     description: "Draw with your body, print with a pen plotter.",
     icon: PenTool,
     color: "bg-[#EA7DFF]",
-    hasModal: false
+    hasModal: true,
+    modalData: {
+      schedule: {
+        online: {
+          title: "Online Sessions",
+          time: "Tuesdays, 19:00 CET",
+          dates: "September 8 & September 15, 2026",
+          color: "#22113E",
+          textColor: "#08F2DB"
+        },
+        inPerson: {
+          title: "In-Person Session",
+          time: "Saturday, 10:00–17:00 CET",
+          dates: "September 19, 2026",
+          color: "#EA7DFF",
+          textColor: "#22113E"
+        }
+      },
+      content: {
+        description: "From Gesture to Pen is a workshop where your body turns into a drawing tool. Using machine learning for body tracking, participants capture gestures through a webcam, transforming movement into SVG data that can be exported and materialized.\n\nIn groups, participants explore how motion becomes digital traces, and then each person prints their own drawing with a pen plotter. The result is both poetic and tangible: a physical artifact that begins with gesture, becomes data, and returns as art on paper.",
+        whatYoullLearn: [
+          "Use machine learning for body and hand tracking via webcam",
+          "Transform movement into data, export data as SVG, and materialize it as physical art",
+          "Basics of working with p5.js to capture and process gestures",
+          "Operate an XY pen plotter to print the drawings on paper"
+        ],
+        whoShouldJoin: "Open to performers, designers, architects, educators, and anyone over 16 interested in body interaction and physical computing. No previous experience required — beginner friendly and guided step by step."
+      },
+      lumaEventUrl: "https://luma.com/lqsxq9en",
+      lumaEmbedUrl: "https://luma.com/embed/event/evt-3n7Cs4gd3THJKaN/simple"
+    }
   },
   {
     id: "room-as-instrument",
@@ -187,7 +247,38 @@ const workshops: Workshop[] = [
     description: "The studio becomes a giant musical instrument in AR.",
     icon: Waves,
     color: "bg-[#08F2DB]",
-    hasModal: false
+    hasModal: true,
+    modalData: {
+      schedule: {
+        online: {
+          title: "Online Sessions",
+          time: "Tuesdays, 19:00 CET",
+          dates: "October 13 & October 20, 2026",
+          color: "#22113E",
+          textColor: "#08F2DB"
+        },
+        inPerson: {
+          title: "In-Person Session",
+          time: "Saturday, 10:00–17:00 CET",
+          dates: "October 24, 2026",
+          color: "#EA7DFF",
+          textColor: "#22113E"
+        }
+      },
+      content: {
+        description: "Room as Instrument is a workshop where augmented reality turns space into a musical playground. Using their phones, participants prototype AR instruments that inhabit the room — a piano stretched across a wall, a harp suspended in the air, a drum triggered by gestures.\n\nWorking in pairs, each group builds an instrument and learns to map zones, recognize hand movements, and trigger sound. We end with a collective performance where all instruments play together in the same space.",
+        whatYoullLearn: [
+          "Basics of augmented reality for interactive sound",
+          "How to map spatial zones and attach sound triggers",
+          "How to use hand/body tracking to control AR instruments",
+          "How to prototype AR instruments and share them via link and source code",
+          "Collaborative composition methods for a final collective performance"
+        ],
+        whoShouldJoin: "Open to designers, performers, musicians, architects, educators, and anyone over 16 curious about AR and interactive sound. No prior experience is required — beginner-friendly and guided step by step."
+      },
+      lumaEventUrl: "https://luma.com/nmybnqnv",
+      lumaEmbedUrl: "https://luma.com/embed/event/evt-fk9NwurwBY8uAPR/simple"
+    }
   },
   {
     id: "embroidering-light",
@@ -196,7 +287,37 @@ const workshops: Workshop[] = [
     description: "Touch conductive embroidery to light up fabrics.",
     icon: Shirt,
     color: "bg-[#EA7DFF]",
-    hasModal: false
+    hasModal: true,
+    modalData: {
+      schedule: {
+        online: {
+          title: "Online Sessions",
+          time: "Tuesdays, 19:00 CET",
+          dates: "November 10 & November 17, 2026",
+          color: "#22113E",
+          textColor: "#08F2DB"
+        },
+        inPerson: {
+          title: "In-Person Workshop",
+          time: "Saturday, 10:00–17:00 CET",
+          dates: "November 21, 2026",
+          color: "#EA7DFF",
+          textColor: "#22113E"
+        }
+      },
+      content: {
+        description: "Embroidering Light is a workshop blending textile craft with technology. Participants use conductive thread and LEDs to stitch interactive fabric that responds with light. Working in small groups, you'll explore the fundamentals of wearables through a poetic, hands-on process.\n\nInspired by Cellular Installation at São Paulo Fashion Week — where embroidery illuminated modular panels like a living organism — this workshop enables you to create personal, illuminated textile pieces that glow when touched.",
+        whatYoullLearn: [
+          "Conductive materials and flexible e-textiles basics",
+          "How to embroider with conductive thread and integrate LEDs",
+          "Designing and connecting touch-activated textile circuits",
+          "Introduction to wearable technology with small-group prototyping"
+        ],
+        whoShouldJoin: "Open to designers, artists, architects, educators, performers, fashion makers, and anyone over 16 curious about textiles and interactive technology. No sewing or electronics experience required."
+      },
+      lumaEventUrl: "https://luma.com/doj9zfji",
+      lumaEmbedUrl: "https://luma.com/embed/event/evt-ihxQOMiaVxB2Fjp/simple"
+    }
   }
 ];
 
