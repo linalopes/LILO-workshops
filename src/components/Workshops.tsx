@@ -1,64 +1,217 @@
 import React, { useState } from 'react';
 import { Video, Zap, Flower, Music, PenTool, Waves, Shirt, X } from 'lucide-react';
 
-const workshops = [
+// TypeScript interface for workshop data
+interface Workshop {
+  id: string;
+  title: string;
+  subtitle: string;
+  description: string;
+  icon: React.ComponentType<{ className?: string }>;
+  color: string;
+  hasModal: boolean;
+  // Modal-specific data
+  modalData?: {
+    image?: string;
+    imageAlt?: string;
+    schedule: {
+      online?: {
+        title: string;
+        time: string;
+        dates: string;
+        color: string;
+        textColor: string;
+      };
+      inPerson?: {
+        title: string;
+        time: string;
+        dates: string;
+        color: string;
+        textColor: string;
+      };
+    };
+    content: {
+      description: string;
+      whatYoullLearn: string[];
+      whoShouldJoin: string;
+    };
+    lumaEventUrl: string; // public event page
+    lumaEmbedUrl?: string; // embed endpoint (optional)
+  };
+}
+
+const workshops: Workshop[] = [
   {
+    id: "augmented-cinema",
     title: "Augmented Cinema",
     subtitle: "Video Mapping + AI",
     description: "Turning the studio into an expanded cinema.",
     icon: Video,
     color: "bg-[#EA7DFF]",
-    hasModal: true
+    hasModal: true,
+    modalData: {
+      image: "/Augmented-Cinema.png",
+      imageAlt: "Augmented Cinema workshop - Video mapping and AI in immersive spaces",
+      schedule: {
+        online: {
+          title: "Online Sessions",
+          time: "Tuesdays, 19:00 CET",
+          dates: "April 7 & April 14, 2026",
+          color: "#22113E",
+          textColor: "#08F2DB"
+        },
+        inPerson: {
+          title: "In-Person Session",
+          time: "Saturday, 10:00–17:00 CET",
+          dates: "April 25, 2026",
+          color: "#EA7DFF",
+          textColor: "#22113E"
+        }
+      },
+      content: {
+        description: "Augmented Cinema is a workshop that transforms video mapping into an immersive, expanded form of cinema. Instead of projecting on façades, we explore how mapping can reshape an interior space, turning walls, ceilings, and floors into living surfaces. Participants step into a scenographic environment where moving images envelop not only the eye but the whole body.\n\nThe workshop builds on Lina Lopes' previous projects such as Vesica Pieces (where dancers' movements and musicians' sounds generated live visuals that wrapped the audience) and an immersive storytelling performance inside Frida Kahlo's bedroom. These experiences show how quickly video mapping can create poetic and playful atmospheres, drawing the public into new spatial narratives.",
+        whatYoullLearn: [
+          "Explore the history and language of expanded cinema.",
+          "Learn the basics of video mapping and how technology shapes visual storytelling.",
+          "Experiment with AI platforms for generating imagery, video textures, and narrative content.",
+          "Work with tools such as MadMapper (primary), Resolume, and alternative software (including iPad-based solutions).",
+          "Collaboratively design and present a two-minute immersive scene inside the studio, with attempts to document the work even if video mapping often resists capture."
+        ],
+        whoShouldJoin: "No previous experience is required — the workshop is designed for complete beginners. At the same time, professionals are welcome to join and use the setting as a space for experimentation. Different challenges can be proposed depending on participants' experience, including adding interactivity or exploring unusual mapping surfaces.\n\nThis workshop is open to performers, designers, educators, architects, and anyone interested in discovering how projection and AI can transform a room into a stage, a story, or a dreamscape. What you take with you is not only technical skills but also a sense of how simple tools — a projector, a surface, a generated image — can shift perception and create new experiences in performance, teaching, or exhibition design."
+      },
+      lumaEventUrl: "https://luma.com/9nfn6wm2",
+      lumaEmbedUrl: "https://luma.com/embed/event/evt-xNrvmYUE6CxuAAC/simple"
+    }
   },
   {
+    id: "maze-circuit",
     title: "Maze Circuit",
     subtitle: "Collaborative Game",
     description: "A collaborative game where connection powers the play.",
     icon: Zap,
-    color: "bg-[#08F2DB]"
+    color: "bg-[#08F2DB]",
+    hasModal: true,
+    modalData: {
+      schedule: {
+        online: {
+          title: "Online Sessions",
+          time: "Tuesdays, 19:00 CET",
+          dates: "May 12 & May 19, 2026",
+          color: "#22113E",
+          textColor: "#08F2DB"
+        },
+        inPerson: {
+          title: "In-Person Session",
+          time: "Saturday, 10:00–17:00 CET",
+          dates: "May 23, 2026",
+          color: "#EA7DFF",
+          textColor: "#22113E"
+        }
+      },
+      content: {
+        description: "Maze Circuit is a collaborative workshop where bodies, conductive materials, and simple code come together to create playful circuits and games. On the floor, a maze made of copper and aluminum tape becomes a responsive playground: sometimes you move alone, sometimes you must connect — hand to hand, foot to foot, skin to skin — to advance.\n\nThe workshop is inspired by Makey Makey's playful logic, where closing a circuit turns the body into a controller. From navigating a conductive labyrinth to controlling a Pong game on screen, participants explore how touch, paper, and tape can transform into digital interfaces. It is an invitation to rethink how everyday materials — and the human body itself — can become unexpected tools for collective play.",
+        whatYoullLearn: [
+          "Learn the basics of conductive materials and simple circuit design",
+          "Explore Makey Makey and similar tools for body-based interaction",
+          "Create collaborative games using touch and movement",
+          "Design and build conductive mazes and interactive surfaces",
+          "Understand how physical materials can become digital interfaces"
+        ],
+        whoShouldJoin: "This workshop is perfect for anyone interested in playful technology, collaborative games, or hands-on learning. No prior experience with electronics or coding is required — we'll start from the basics and build up together. The workshop is designed for educators, artists, designers, and anyone curious about how our bodies can interact with technology in new and unexpected ways."
+      },
+      lumaEventUrl: "https://luma.com/iwq729r8",
+      lumaEmbedUrl: "https://luma.com/embed/event/evt-qJ5pyCoWsj8Q2et/simple"
+    }
   },
   {
+    id: "singing-to-garden",
     title: "Singing to a Garden",
     subtitle: "Voice Interaction",
     description: "Voices make flowers bloom, silence makes them close.",
     icon: Flower,
-    color: "bg-[#EA7DFF]"
+    color: "bg-[#EA7DFF]",
+    hasModal: true,
+    modalData: {
+      schedule: {
+        online: {
+          title: "Online Sessions",
+          time: "Tuesdays, 19:00 CET",
+          dates: "June 2 & June 9, 2026",
+          color: "#22113E",
+          textColor: "#08F2DB"
+        },
+        inPerson: {
+          title: "In-Person Session",
+          time: "Saturday, 10:00–17:00 CET",
+          dates: "June 13, 2026",
+          color: "#EA7DFF",
+          textColor: "#22113E"
+        }
+      },
+      content: {
+        description: "Singing to a Garden is a hands-on workshop where paper meets sound. Participants fold and craft kinetic flowers from paper, then bring them to life using simple Arduino circuits connected to microphones. Singing, clapping, or any sound becomes the trigger: voices open the flowers, silence makes them close.\n\nTogether we build not just individual sculptures but a collective blooming garden — a poetic and playful experiment in interaction, design, and technology.",
+        whatYoullLearn: [
+          "Design and fold paper into kinetic flower structures",
+          "Basics of Arduino as an accessible tool for sound interaction",
+          "How microphones/sensors translate voice and sound into motion",
+          "Collaborative building of a garden installation that responds to sound"
+        ],
+        whoShouldJoin: "No previous experience is required — this workshop is designed for beginners as well as curious minds from any field. Open to designers, educators, architects, performers, and anyone over 16 interested in kinetic sculpture, paper craft, and interactive design."
+      },
+      lumaEventUrl: "https://luma.com/gpkaocvs",
+      lumaEmbedUrl: "https://luma.com/embed/event/evt-njJulGJrOK7B9ef/simple"
+    }
   },
   {
+    id: "marble-machine-orchestra",
     title: "Marble Machine Orchestra",
     subtitle: "Sound Installation",
     description: "Build and play with rolling marbles and sound.",
     icon: Music,
-    color: "bg-[#08F2DB]"
+    color: "bg-[#08F2DB]",
+    hasModal: false
   },
   {
+    id: "gesture-to-pen",
     title: "From Gesture to Pen",
     subtitle: "Body Drawing",
     description: "Draw with your body, print with a pen plotter.",
     icon: PenTool,
-    color: "bg-[#EA7DFF]"
+    color: "bg-[#EA7DFF]",
+    hasModal: false
   },
   {
+    id: "room-as-instrument",
     title: "Room as Instrument",
     subtitle: "AR Music",
     description: "The studio becomes a giant musical instrument in AR.",
     icon: Waves,
-    color: "bg-[#08F2DB]"
+    color: "bg-[#08F2DB]",
+    hasModal: false
   },
   {
+    id: "embroidering-light",
     title: "Embroidering Light",
     subtitle: "Textile Technology",
     description: "Touch conductive embroidery to light up fabrics.",
     icon: Shirt,
-    color: "bg-[#EA7DFF]"
+    color: "bg-[#EA7DFF]",
+    hasModal: false
   }
 ];
 
 export function Workshops() {
   const [isModalOpen, setIsModalOpen] = useState(false);
+  const [selectedWorkshop, setSelectedWorkshop] = useState<Workshop | null>(null);
 
-  const openModal = () => setIsModalOpen(true);
-  const closeModal = () => setIsModalOpen(false);
+  const openModal = (workshop: Workshop) => {
+    setSelectedWorkshop(workshop);
+    setIsModalOpen(true);
+  };
+  const closeModal = () => {
+    setIsModalOpen(false);
+    setSelectedWorkshop(null);
+  };
 
   return (
     <section id="workshops" className="bg-gray-50 py-16">
@@ -115,7 +268,7 @@ export function Workshops() {
               return (
                 <button
                   key={index}
-                  onClick={openModal}
+                  onClick={() => openModal(workshop)}
                   className="bg-white p-6 border border-gray-200 hover:border-[#EA7DFF] hover:shadow-lg transition-all duration-200 group cursor-pointer block text-left w-full"
                 >
                   <CardContent />
@@ -136,28 +289,28 @@ export function Workshops() {
       </div>
 
       {/* Modal */}
-      {isModalOpen && (
+      {isModalOpen && selectedWorkshop && selectedWorkshop.modalData && (
         <div className="fixed inset-0 bg-black bg-opacity-50 flex items-center justify-center p-4 z-50">
           <div className="bg-white rounded-lg max-w-4xl max-h-[90vh] overflow-y-auto">
             <div className="p-8">
               {/* Header */}
               <div className="flex items-start justify-between mb-6">
                 <div className="flex items-center gap-4 flex-1">
-                  <div className="bg-[#EA7DFF] p-3">
-                    <Video className="w-6 h-6 text-white" />
+                  <div className={`${selectedWorkshop.color} p-3`}>
+                    <selectedWorkshop.icon className="w-6 h-6 text-white" />
                   </div>
                   <div className="flex-1">
                     <h2
                       className="text-2xl font-medium text-[#22113E]"
                       style={{ fontFamily: 'Space Grotesk' }}
                     >
-                      Augmented Cinema
+                      {selectedWorkshop.title}
                     </h2>
                     <p
                       className="text-sm text-gray-600 font-medium"
                       style={{ fontFamily: 'Courier Prime' }}
                     >
-                      Video Mapping + AI
+                      {selectedWorkshop.subtitle}
                     </p>
                   </div>
                 </div>
@@ -172,36 +325,27 @@ export function Workshops() {
               {/* Mobile Ticket Button */}
               <div className="md:hidden mb-6">
                 <a
-                  href="https://luma.com/9nfn6wm2"
+                  href={selectedWorkshop.modalData.lumaEventUrl}
                   target="_blank"
                   rel="noopener noreferrer"
                   className="bg-[#EA7DFF] text-white px-6 py-4 text-base font-medium hover:bg-[#d666e6] transition-colors rounded-lg w-full text-center block"
                   style={{ fontFamily: 'Inter' }}
                 >
-                  🎫 Buy the ticket at Luma
+                  Register at Luma
                 </a>
               </div>
 
               {/* Desktop Ticket Button */}
-              {/* <div className="hidden md:block mb-6">
+              <div className="hidden md:block mb-6">
                 <a
-                  href="https://luma.com/9nfn6wm2"
+                  href={selectedWorkshop.modalData.lumaEventUrl}
                   target="_blank"
                   rel="noopener noreferrer"
                   className="bg-[#EA7DFF] text-white px-6 py-3 text-sm font-medium hover:bg-[#d666e6] transition-colors rounded-lg inline-block"
                   style={{ fontFamily: 'Inter' }}
                 >
-                  🎫 Buy the ticket at Luma
+                  Register at Luma
                 </a>
-              </div> */}
-
-              {/* Workshop Image */}
-              <div className="mb-6">
-                <img
-                  src="/Augmented-Cinema.png"
-                  alt="Augmented Cinema workshop - Video mapping and AI in immersive spaces"
-                  className="w-full h-auto rounded-lg shadow-sm"
-                />
               </div>
 
               {/* Workshop Schedule */}
@@ -214,134 +358,179 @@ export function Workshops() {
                 </h3>
                 <div className="grid md:grid-cols-2 gap-4">
                   {/* Online Sessions */}
-                  <div className="rounded-lg p-4" style={{ backgroundColor: '#22113E', border: '1px solid #22113E' }}>
-                    <div className="flex items-center gap-2 mb-2">
-                      <div className="w-3 h-3 rounded-full" style={{ backgroundColor: '#08F2DB' }}></div>
-                      <h4
-                        className="font-medium text-white"
+                  {selectedWorkshop.modalData.schedule.online && (
+                    <div
+                      className="rounded-lg p-4"
+                      style={{
+                        backgroundColor: selectedWorkshop.modalData.schedule.online.color,
+                        border: `1px solid ${selectedWorkshop.modalData.schedule.online.color}`
+                      }}
+                    >
+                      <div className="flex items-center gap-2 mb-2">
+                        <div
+                          className="w-3 h-3 rounded-full"
+                          style={{ backgroundColor: selectedWorkshop.modalData.schedule.online.textColor }}
+                        ></div>
+                        <h4
+                          className="font-medium text-white"
+                          style={{ fontFamily: 'Inter' }}
+                        >
+                          {selectedWorkshop.modalData.schedule.online.title}
+                        </h4>
+                      </div>
+                      <p
+                        className="text-sm mb-2"
+                        style={{
+                          fontFamily: 'Courier Prime',
+                          color: selectedWorkshop.modalData.schedule.online.textColor
+                        }}
+                      >
+                        {selectedWorkshop.modalData.schedule.online.time}
+                      </p>
+                      <p
+                        className="text-sm font-medium text-white"
                         style={{ fontFamily: 'Inter' }}
                       >
-                        Online Sessions
-                      </h4>
+                        {selectedWorkshop.modalData.schedule.online.dates}
+                      </p>
                     </div>
-                    <p
-                      className="text-sm mb-2"
-                      style={{ fontFamily: 'Courier Prime', color: '#08F2DB' }}
-                    >
-                      Tuesdays, 19:00 CET
-                    </p>
-                    <p
-                      className="text-sm font-medium text-white"
-                      style={{ fontFamily: 'Inter' }}
-                    >
-                      April 7 & April 14, 2026
-                    </p>
-                  </div>
+                  )}
 
                   {/* In-Person Session */}
-                  <div className="rounded-lg p-4" style={{ backgroundColor: '#EA7DFF', border: '1px solid #EA7DFF' }}>
-                    <div className="flex items-center gap-2 mb-2">
-                      <div className="w-3 h-3 bg-white rounded-full"></div>
-                      <h4
-                        className="font-medium text-white"
+                  {selectedWorkshop.modalData.schedule.inPerson && (
+                    <div
+                      className="rounded-lg p-4"
+                      style={{
+                        backgroundColor: selectedWorkshop.modalData.schedule.inPerson.color,
+                        border: `1px solid ${selectedWorkshop.modalData.schedule.inPerson.color}`
+                      }}
+                    >
+                      <div className="flex items-center gap-2 mb-2">
+                        <div className="w-3 h-3 bg-white rounded-full"></div>
+                        <h4
+                          className="font-medium text-white"
+                          style={{ fontFamily: 'Inter' }}
+                        >
+                          {selectedWorkshop.modalData.schedule.inPerson.title}
+                        </h4>
+                      </div>
+                      <p
+                        className="text-sm mb-2"
+                        style={{
+                          fontFamily: 'Courier Prime',
+                          color: selectedWorkshop.modalData.schedule.inPerson.textColor
+                        }}
+                      >
+                        {selectedWorkshop.modalData.schedule.inPerson.time}
+                      </p>
+                      <p
+                        className="text-sm font-medium text-white"
                         style={{ fontFamily: 'Inter' }}
                       >
-                        In-Person Session
-                      </h4>
+                        {selectedWorkshop.modalData.schedule.inPerson.dates}
+                      </p>
                     </div>
-                    <p
-                      className="text-sm mb-2"
-                      style={{ fontFamily: 'Courier Prime', color: '#22113E' }}
-                    >
-                      Saturday, 10:00–17:00 CET
-                    </p>
-                    <p
-                      className="text-sm font-medium text-white"
-                      style={{ fontFamily: 'Inter' }}
-                    >
-                      April 25, 2026
-                    </p>
-                  </div>
+                  )}
                 </div>
               </div>
 
               {/* Content */}
               <div className="space-y-6" style={{ fontFamily: 'Inter' }}>
                 <div className="text-gray-700 leading-relaxed">
-                  <p className="mb-4">
-                    <strong>Augmented Cinema</strong> is a workshop that transforms video mapping into an immersive, expanded form of cinema. Instead of projecting on façades, we explore how mapping can reshape an interior space, turning walls, ceilings, and floors into living surfaces. Participants step into a scenographic environment where moving images envelop not only the eye but the whole body.
-                  </p>
-
-                  <p className="mb-4">
-                    The workshop builds on Lina Lopes' previous projects such as <em>Vesica Pieces</em> (where dancers' movements and musicians' sounds generated live visuals that wrapped the audience) and an immersive storytelling performance inside Frida Kahlo's bedroom. These experiences show how quickly video mapping can create poetic and playful atmospheres, drawing the public into new spatial narratives.
-                  </p>
+                  {selectedWorkshop.modalData.content.description.split('\n\n').map((paragraph, index) => (
+                    <p key={index} className="mb-4">
+                      {paragraph}
+                    </p>
+                  ))}
                 </div>
 
-                {/* <div>
-                  <h3
-                    className="text-lg font-medium text-[#22113E] mb-4"
-                    style={{ fontFamily: 'Space Grotesk' }}
-                  >
-                    What You'll Learn
-                  </h3>
-                  <p className="text-gray-700 mb-4">
-                    Over the course of two online sessions and one in-person Saturday, participants will:
-                  </p>
-                  <ul className="list-disc list-inside space-y-2 text-gray-700 ml-4">
-                    <li>Explore the history and language of expanded cinema.</li>
-                    <li>Learn the basics of video mapping and how technology shapes visual storytelling.</li>
-                    <li>Experiment with AI platforms for generating imagery, video textures, and narrative content.</li>
-                    <li>Work with tools such as <strong>MadMapper</strong> (primary), <strong>Resolume</strong>, and alternative software (including iPad-based solutions).</li>
-                    <li>Collaboratively design and present a <strong>two-minute immersive scene</strong> inside the studio, with attempts to document the work even if video mapping often resists capture.</li>
-                  </ul>
-                </div> */}
+                {/* What You'll Learn Section */}
+                {selectedWorkshop.modalData.content.whatYoullLearn && selectedWorkshop.modalData.content.whatYoullLearn.length > 0 && (
+                  <div>
+                    <h3
+                      className="text-lg font-medium text-[#22113E] mb-4"
+                      style={{ fontFamily: 'Space Grotesk' }}
+                    >
+                      What You'll Learn
+                    </h3>
+                    <ul className="list-disc list-inside space-y-2 text-gray-700 ml-4">
+                      {selectedWorkshop.modalData.content.whatYoullLearn.map((item, index) => (
+                        <li key={index}>{item}</li>
+                      ))}
+                    </ul>
+                  </div>
+                )}
 
-                {/* <div>
-                  <h3
-                    className="text-lg font-medium text-[#22113E] mb-4"
-                    style={{ fontFamily: 'Space Grotesk' }}
-                  >
-                    Who Should Join
-                  </h3>
-                  <p className="text-gray-700 leading-relaxed">
-                    No previous experience is required — the workshop is designed for complete beginners. At the same time, professionals are welcome to join and use the setting as a space for experimentation. Different challenges can be proposed depending on participants' experience, including adding interactivity or exploring unusual mapping surfaces.
-                  </p>
-                  <p className="text-gray-700 leading-relaxed mt-4">
-                    This workshop is open to performers, designers, educators, architects, and anyone interested in discovering how projection and AI can transform a room into a stage, a story, or a dreamscape. What you take with you is not only technical skills but also a sense of how simple tools — a projector, a surface, a generated image — can shift perception and create new experiences in performance, teaching, or exhibition design.
-                  </p>
-                </div> */}
+                {/* Who Should Join Section */}
+                {selectedWorkshop.modalData.content.whoShouldJoin && (
+                  <div>
+                    <h3
+                      className="text-lg font-medium text-[#22113E] mb-4"
+                      style={{ fontFamily: 'Space Grotesk' }}
+                    >
+                      Who Should Join
+                    </h3>
+                    {selectedWorkshop.modalData.content.whoShouldJoin.split('\n\n').map((paragraph, index) => (
+                      <p key={index} className="text-gray-700 leading-relaxed">
+                        {paragraph}
+                      </p>
+                    ))}
+                  </div>
+                )}
               </div>
 
               {/* Luma Registration Embed */}
-              <div className="mt-8">
-                <h3
-                  className="text-lg font-medium text-[#22113E] mb-4"
-                  style={{ fontFamily: 'Space Grotesk' }}
-                >
-                  Register for the Workshop
-                </h3>
-                <div className="flex justify-center">
-                  <iframe
-                    src="https://luma.com/embed/event/evt-xNrvmYUE6CxuAAC/simple"
-                    width="100%"
-                    height="450"
-                    allow="fullscreen; payment"
-                    aria-hidden="false"
-                    tabIndex={0}
-                  ></iframe>
+              {selectedWorkshop.modalData.lumaEmbedUrl ? (
+                <div className="mt-8">
+                  <h3
+                    className="text-lg font-medium text-[#22113E] mb-4"
+                    style={{ fontFamily: 'Space Grotesk' }}
+                  >
+                    Register for the Workshop
+                  </h3>
+                  <div className="flex justify-center">
+                    <iframe
+                      src={selectedWorkshop.modalData.lumaEmbedUrl}
+                      width="100%"
+                      height="450"
+                      allow="fullscreen; payment"
+                      aria-hidden="false"
+                      tabIndex={0}
+                    ></iframe>
+                  </div>
                 </div>
-              </div>
+              ) : (
+                <div className="mt-8">
+                  <h3
+                    className="text-lg font-medium text-[#22113E] mb-4"
+                    style={{ fontFamily: 'Space Grotesk' }}
+                  >
+                    Register for the Workshop
+                  </h3>
+                  <div className="text-center">
+                    <a
+                      href={selectedWorkshop.modalData.lumaEventUrl}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="bg-[#EA7DFF] text-white px-8 py-4 text-lg font-medium hover:bg-[#d666e6] transition-colors rounded-lg inline-block"
+                      style={{ fontFamily: 'Inter' }}
+                    >
+                      🎫 Register on Luma Platform
+                    </a>
+                  </div>
+                </div>
+              )}
 
               {/* Footer */}
               <div className="mt-8 pt-6 border-t border-gray-200 flex flex-col sm:flex-row gap-3 sm:justify-between sm:items-center">
                 <a
-                  href="https://luma.com/9nfn6wm2"
+                  href={selectedWorkshop.modalData.lumaEventUrl}
                   target="_blank"
                   rel="noopener noreferrer"
                   className="bg-[#EA7DFF] text-white px-6 py-3 text-base font-medium hover:bg-[#d666e6] transition-colors rounded-lg text-center block sm:inline-block"
                   style={{ fontFamily: 'Inter' }}
                 >
-                  🎫 Buy the ticket at Luma
+                  Register at Luma
                 </a>
                 <button
                   onClick={closeModal}
