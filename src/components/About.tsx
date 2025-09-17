@@ -22,7 +22,7 @@ export function About() {
             You’ll leave each session with <b>hands-on prototypes, new tools to play with, and a shared sense of how technology can expand performance, space, and imagination.</b>
             </p>
             <p>
-            The program offers <b>seven independent, one-day workshops</b> on Saturdays, <b>10am–5pm</b>. Each workshop includes <b>two short online prep sessions</b> that introduce the ideas and tools. <b>Join online, in person, or both—choose how deep you want to dive.</b>
+            Presented by the <b>School of Tomorrow's AI</b> in collaboration with the <b>Glitch Lab</b>, the program offers <b>seven independent, one-day workshops</b> on Saturdays, <b>10am–5pm</b>. Each workshop includes <b>two short online prep sessions</b> that introduce the ideas and tools. <b>Join online, in person, or both—choose how deep you want to dive.</b>
             </p>
           </div>
         </div>

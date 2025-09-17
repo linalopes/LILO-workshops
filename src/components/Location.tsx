@@ -16,7 +16,13 @@ export function Location() {
             className="text-lg text-gray-600 max-w-3xl mx-auto"
             style={{ fontFamily: 'Inter' }}
           >
-            Our home for the workshops is the Schönauareal in Wetzikon — a transformed factory space where performance, technology, and experimentation come together.
+            Our home for the workshops is the Glitch Lab, located in the Schönauareal in Wetzikon — a transformed factory space where technology, and experimentation come together.
+          </p>
+          <p
+            className="text-lg text-gray-600 max-w-3xl mx-auto"
+            style={{ fontFamily: 'Inter' }}
+          >
+            Directed by Stefanie Inhelder, the Glitch Lab hosts "Room for Interaction 2026", presented in collaboration with the School of Tomorrow’s AI, directed by Lina Lopes.
           </p>
         </div>
 
@@ -39,8 +45,7 @@ export function Location() {
                     className="text-gray-700 leading-relaxed"
                     style={{ fontFamily: 'Inter' }}
                   >
-                    The Schönauareal is a former factory that has been thoughtfully converted into a creative hub.
-                    Its industrial heritage provides the perfect backdrop for innovative workshops and artistic exploration.
+                    The Schönauareal is a former factory now home to the Glitch Lab, converted into a creative hub. Its industrial heritage provides the perfect backdrop for innovative workshops and artistic exploration.
                   </p>
                 </div>
               </div>
@@ -62,8 +67,7 @@ export function Location() {
                     className="text-gray-700 leading-relaxed"
                     style={{ fontFamily: 'Inter' }}
                   >
-                    With a dance studio, a workshop for prototyping, and open areas for gatherings,
-                    the site itself becomes part of the experience.
+                    With a dance studio, a prototyping workshop, and open areas for gatherings, the Glitch Lab is designed to support collaboration. The site itself becomes part of the experience.
                   </p>
                 </div>
               </div>
@@ -85,8 +89,7 @@ export function Location() {
                     className="text-gray-700 leading-relaxed"
                     style={{ fontFamily: 'Inter' }}
                   >
-                    The space encourages creative risk-taking and provides the tools and environment
-                    needed for cutting-edge interactive art and technology workshops.
+                    The Glitch Lab encourages creative risk-taking and provides the tools and environment needed for cutting-edge interactive art and technology workshops.
                   </p>
                 </div>
               </div>
@@ -114,24 +117,24 @@ export function Location() {
                   <img
                     src="/1_dancestudio.jpg"
                     alt="Dance studio at Schönauareal - perfect for movement-based workshops"
-                    className="w-full h-32 object-cover shadow-sm hover:shadow-md transition-shadow"
+                    className="w-full h-42 object-cover shadow-sm hover:shadow-md transition-shadow"
                   />
                   <img
                     src="/5_kitchen.jpg"
                     alt="Kitchen and common area for breaks and gatherings"
-                    className="w-full h-32 object-cover shadow-sm hover:shadow-md transition-shadow"
+                    className="w-full h-42 object-cover shadow-sm hover:shadow-md transition-shadow"
                   />
                 </div>
                 <div className="space-y-3">
                   <img
                     src="/2_dancestudio.jpg"
                     alt="Another view of the dance studio showing the spacious layout"
-                    className="w-full h-32 object-cover shadow-sm hover:shadow-md transition-shadow"
+                    className="w-full h-42 object-cover shadow-sm hover:shadow-md transition-shadow"
                   />
                   <img
                     src="/4_workspace.jpg"
                     alt="Additional workspace area for collaborative projects"
-                    className="w-full h-32 object-cover shadow-sm hover:shadow-md transition-shadow"
+                    className="w-full h-42 object-cover shadow-sm hover:shadow-md transition-shadow"
                   />
                 </div>
               </div>

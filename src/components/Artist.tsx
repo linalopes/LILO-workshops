@@ -37,7 +37,13 @@ export function Artist() {
               >
                 Lina Lopes is an artist and creative technologist exploring the intersections of performance,
                 interactive spaces, and technology. With over a decade of experience across art, design, and innovation,
-                she has presented her work internationally in museums, universities, and festivals. Her practice includes collaborations with institutions such as the MIT Media Lab, Arte1 TV and FabLabs. She creates collaborative workshops where technology becomes a tool for imagination, play, and radical experimentation. Check out her <a href="https://www.linalopes.info" target="_blank" rel="noopener noreferrer" className="text-[#EA7DFF] hover:text-[#d666e6] underline transition-colors">website</a> for more information.
+                she has presented her work internationally in museums, universities, and festivals. Her practice includes collaborations with institutions such as the MIT Media Lab, Arte1 TV and FabLabs. She creates collaborative workshops where technology becomes a tool for imagination, play, and radical experimentation. She is also the director of the <strong>School of Tomorrow's AI</strong>, which partners with <strong>Glitch Lab</strong> to bring Room for Interaction 2026 to life.
+              </p>
+              <p
+                className="text-base leading-relaxed text-gray-700 font-normal mt-4"
+                style={{ fontFamily: 'Inter' }}
+              >
+                Check out her <a href="https://www.linalopes.info" target="_blank" rel="noopener noreferrer" className="text-[#EA7DFF] hover:text-[#d666e6] underline transition-colors">website</a> for more information.
               </p>
             </div>
           </div>

@@ -17,7 +17,7 @@ export function Hero() {
       <div className="max-w-7xl mx-auto px-6 relative z-10">
         <div className="text-center max-w-4xl mx-auto">
           <h1
-            className="text-5xl md:text-7xl font-light text-[#22113E] mb-6 leading-tight"
+            className="text-5xl md:text-7xl font-light text-[#22113E] py-6 leading-tight"
             style={{ fontFamily: 'Space Grotesk' }}
           >
             Room for Interaction
@@ -27,6 +27,8 @@ export function Hero() {
             style={{ fontFamily: 'Space Grotesk' }}
           >
             A playground for body, space and technology.
+            <br />
+            An initiative of the <b>School of Tomorrow's AI</b> with <b>Glitch Lab</b>.
           </p>
           <div
             className="inline-block bg-gray-100 px-6 py-3 text-lg text-[#22113E] mb-12 font-medium"

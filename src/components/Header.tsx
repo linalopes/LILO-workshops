@@ -17,7 +17,7 @@ export function Header() {
       <div className="max-w-7xl mx-auto px-6 py-4">
         <div className="flex items-center justify-between">
           <div className="text-2xl font-light tracking-tight text-[#22113E]" style={{ fontFamily: 'Space Grotesk' }}>
-            Room for Interaction
+            School of Tomorrow's AI
           </div>
 
           {/* Desktop Navigation */}
