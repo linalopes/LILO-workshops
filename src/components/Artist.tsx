@@ -17,7 +17,7 @@ export function Artist() {
       <div className="absolute inset-0 bg-white/85"></div>
 
       <div className="max-w-6xl mx-auto px-6 relative z-10">
-        <div className="bg-white/90 p-8 md:p-12 border border-gray-200 rounded-lg shadow-sm">
+        <div className="bg-white/90 p-8 md:p-12 border border-gray-200 shadow-sm">
           <div className="flex flex-col md:flex-row items-center gap-12">
             <div className="flex-shrink-0">
               <div className="bg-[#EA7DFF] ">

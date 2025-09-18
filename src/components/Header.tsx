@@ -55,6 +55,9 @@ export function Header() {
               <a href="#artist" className="text-[#22113E] hover:text-[#EA7DFF] transition-colors font-light" style={{ fontFamily: 'Inter' }}>
                 Host
               </a>
+              <a href="#faq" className="text-[#22113E] hover:text-[#EA7DFF] transition-colors font-light" style={{ fontFamily: 'Inter' }}>
+                FAQ
+              </a>
             </nav>
             <a href="#contact" className="bg-[#EA7DFF] text-white px-6 py-2 font-medium hover:bg-[#d666e6] transition-colors" style={{ fontFamily: 'Inter' }}>
               Stay updated
@@ -113,6 +116,14 @@ export function Header() {
                 style={{ fontFamily: 'Inter' }}
               >
                 Host
+              </a>
+              <a
+                href="#faq"
+                onClick={closeMobileMenu}
+                className="text-[#22113E] hover:text-[#EA7DFF] transition-colors font-light py-2"
+                style={{ fontFamily: 'Inter' }}
+              >
+                FAQ
               </a>
               <a
                 href="#contact"
