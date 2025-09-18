@@ -69,8 +69,20 @@ export function FAQ() {
   };
 
   return (
-    <section id="faq" className="py-20 bg-white">
-      <div className="max-w-4xl mx-auto px-6">
+    <section
+      id="faq"
+      className="py-20 relative"
+      style={{
+        backgroundImage: 'url(/LiloAcademy_Pattern_6.png)',
+        backgroundSize: 'cover',
+        backgroundPosition: 'center',
+        backgroundRepeat: 'no-repeat'
+      }}
+    >
+      {/* Overlay for subtle fade effect */}
+      <div className="absolute inset-0 bg-white/60"></div>
+
+      <div className="max-w-4xl mx-auto px-6 relative z-10">
         <h2
           className="text-4xl md:text-5xl font-light text-[#22113E] mb-16 text-center"
           style={{ fontFamily: 'Space Grotesk' }}
@@ -82,11 +94,11 @@ export function FAQ() {
           {faqData.map((item, index) => (
             <div
               key={index}
-              className="border border-gray-200 overflow-hidden"
+              className="border border-gray-200 rounded-lg overflow-hidden bg-white/80 backdrop-blur-sm"
             >
               <button
                 onClick={() => toggleItem(index)}
-                className="w-full px-6 py-5 text-left bg-white hover:bg-gray-50 transition-colors duration-200 flex items-center justify-between"
+                className="w-full px-6 py-5 text-left bg-white/90 hover:bg-white transition-colors duration-200 flex items-center justify-between"
               >
                 <h3
                   className="text-lg font-medium text-[#22113E] pr-4"
@@ -102,7 +114,7 @@ export function FAQ() {
               </button>
 
               {openItems.includes(index) && (
-                <div className="px-6 pb-5 bg-gray-50">
+                <div className="px-6 pb-5 bg-white/70">
                   <p
                     className="text-gray-700 leading-relaxed"
                     style={{ fontFamily: 'Inter' }}
