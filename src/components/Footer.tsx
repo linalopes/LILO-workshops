@@ -1,5 +1,5 @@
 import React from 'react';
-import { Mail } from 'lucide-react';
+import { Mail, Instagram, Youtube, Linkedin } from 'lucide-react';
 
 export function Footer() {
   return (
@@ -32,6 +32,35 @@ export function Footer() {
             style={{ fontFamily: 'Space Grotesk' }}
           >
             Room for Interaction
+          </div>
+          <div className="flex items-center gap-6 mb-4 md:mb-0">
+            <a
+              href="https://www.instagram.com/lilo.think/"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="text-[#22113E] hover:text-[#08F2DB] transition-colors"
+              aria-label="Follow on Instagram"
+            >
+              <Instagram className="w-6 h-6" />
+            </a>
+            <a
+              href="https://www.youtube.com/@lina_lopes"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="text-[#22113E] hover:text-[#08F2DB] transition-colors"
+              aria-label="Subscribe on YouTube"
+            >
+              <Youtube className="w-6 h-6" />
+            </a>
+            <a
+              href="https://www.linkedin.com/in/lina-lopes/"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="text-[#22113E] hover:text-[#08F2DB] transition-colors"
+              aria-label="Connect on LinkedIn"
+            >
+              <Linkedin className="w-6 h-6" />
+            </a>
           </div>
           <div
             className="text-gray-600 font-normal"
